@@ -30,14 +30,13 @@ var vueTouchEvents = {
     install: function (Vue, options) {
 
         // Set default options
-        options = Object.assign({}, {
+        options = {
             disableClick: false,
             tapTolerance: 10,
             swipeTolerance: 30,
             longTapTimeInterval: 400,
             touchClass: ''
-        }, options || {})
-
+        };
 
         function touchStartEvent(event) {
             var $this = this.$$touchObj
